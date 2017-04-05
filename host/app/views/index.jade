@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 nodeCQRS
+  p At this point of development you can create, change and delete items. 
+  p They are saved in a read model for presentation and in an eventstore for domain persitance.
+
+  #index-view
+      input#newItemText(type="text")
+      button#addItem add
+
+      ul#items
+
+  p You can have multiple browser windows open - all get updated via socket.io.
