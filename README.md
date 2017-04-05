@@ -21,3 +21,4 @@ There is also an [API gateway](http://microservices.io/patterns/apigateway.html)
 
 ## Links
 - https://github.com/cer/event-sourcing-examples
+- https://github.com/jamuhl/nodeCQRS
