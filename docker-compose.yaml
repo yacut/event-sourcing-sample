@@ -1,9 +1,5 @@
 version: '2'
 services:
-  mongodb:
-    image: mongo
-    ports:
-      - "27017:27017"
   redis:
     image: redis
     ports:
@@ -11,22 +7,18 @@ services:
   cqrs-domain:
     build: ./domain
     depends_on:
-      - mongodb
       - redis
     links:
-      - mongodb
       - redis
     environment:
-      WAIT_HOSTS: redis:6379, mongodb:27017
+      WAIT_HOSTS: redis:6379
   cqrs-host:
     build: ./host
     ports:
       - "3000:3000"
     depends_on:
-      - mongodb
       - redis
     links:
-      - mongodb
       - redis
     environment:
-      WAIT_HOSTS: redis:6379, mongodb:27017
+      WAIT_HOSTS: redis:6379
