@@ -1,0 +1,8 @@
+{
+  "name": "event-sourcing-sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:yacut/event-sourcing-sample.git",
+  "author": "yacut@protonmail.com",
+  "license": "MIT"
+}
