@@ -17,7 +17,7 @@ const eventstore = require('eventstore');
 // just use another redis client and publish events to the _events channel_
 const publisher = {
 
-  evt: redis.createClient(),
+  evt: redis.createClient('6379', 'redis'),
 
   publish(evt) {
     const msg = JSON.stringify(evt, null, 4);

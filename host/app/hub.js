@@ -4,8 +4,8 @@ const redis = require('redis');
 const colors = require('./colors');
 const map = require('./msgmap');
 
-const cmd = redis.createClient('redis');
-const evt = redis.createClient('redis');
+const cmd = redis.createClient('6379', 'redis');
+const evt = redis.createClient('6379', 'redis');
 const subscriptions = [];
 
 // send commands to redis __commands channel__

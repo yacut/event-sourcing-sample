@@ -13,11 +13,19 @@ services:
     depends_on:
       - mongodb
       - redis
+    links:
+      - mongodb
+      - redis
     environment:
       WAIT_HOSTS: redis:6379, mongodb:27017
   cqrs-host:
     build: ./host
+    ports:
+      - "3000:3000"
     depends_on:
+      - mongodb
+      - redis
+    links:
       - mongodb
       - redis
     environment:

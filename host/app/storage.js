@@ -3,7 +3,7 @@
 const redis = require('redis');
 const async = require('async');
 
-const db = redis.createClient();
+const db = redis.createClient('6379', 'redis');
 
 const store = {
 

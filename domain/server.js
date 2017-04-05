@@ -6,7 +6,7 @@ const colors = require('./app/colors');
 const handler = require('./app/commandHandler');
 
 // create a connection to local redis server
-const cmd = redis.createClient('http://redis');
+const cmd = redis.createClient('6379', 'redis');
 
 // on receiving a message (__=command__) from redis pass it to
 // the commandHandler calling the handle function
